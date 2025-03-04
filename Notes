@@ -22,7 +22,10 @@ Django Installation:-
 ------------------------------------
 
 Project Creation:-
-    - django-admin startproject <project_name>
+    - In Django, a "project" is a collection of configurations and applications that together
+    make up a web application or a website.
+
+    Command :- django-admin startproject <project_name>
 
 -------------------------------------
 
@@ -32,11 +35,47 @@ Change Dir:-
 -----------------------------------
 
 App Creation:-
-    - python manage.py startapp <app1>
+    - App is a Web application that does something. An app usually is composed of a set of models
+    (database tables), views, templates, tests.
+
+    Command :- python manage.py startapp <app1>
 
 -----------------------------------
+
+App Confiq:
+    Open sub project -> settings.py -> INSTALLED_APPS ['add_app_name']
+
+------------------------------------
 
 Run Command:-
     - python manage.py runserver
 
 -----------------------------------
+
+DJANGO MVC - MVT Pattern:
+    The Model-View-Template (MVT) is slightly different from MVC. In fact the
+    main difference between the two patterns is that Django itself takes care
+    of the Controller part (Software Code that controls the interactions
+    between the Model and View), leaving us with the template. The template
+    is a HTML file mixed with Django Template Language (DTL).
+
+    Model: Handles data access, manipulation, and validation.
+    View: Processes requests, retrieves data from models, and sends data to templates for rendering.
+    Template: Renders HTML with dynamic content using data provided by views.
+
+---------------------------------------------
+
+Template:-
+    - In Django, templates are HTML files that allow you to add dynamic content to your website.
+    They help separate the design (HTML) from the logic (Python code).
+
+    Configuration:  Project -> Settings -> Template (list) -> DIRS : [os.path.join(BASE_DIR, 'Template')]
+
+--------------------------------------------
+
+Static:-
+    - In django the  additional files such as images, JavaScript, or CSS refer to as “static files.
+
+    Configuration: Project -> Settings -> scroll down -> static option ->
+                    STATIC_DIR = os.path.join(BASE_DIR, 'static')
+                    STATICFILES_DIRS = [STATIC_DIR,]
