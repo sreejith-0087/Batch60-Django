@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Details</title>
+</head>
+<body>
+
+<h2>Student Database</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Subject</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in Details %}
+        <tr>
+            <td>{{i.Name}}</td>
+            <td>{{i.Age}}</td>
+            <td>{{i.Subject}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>

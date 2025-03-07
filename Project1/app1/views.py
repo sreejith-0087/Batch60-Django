@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import *
 # Create your views here.
 
 
@@ -29,4 +30,17 @@ def Page_Redirection_About(request):
 
 def Page_Redirection_Contact(request):
     return render(request, '5.Page_Redirection(Contact).html')
+
+def Template_Extending_Home(request):
+    return render(request, '7.Template_Extending(Home).html')
+
+def Template_Extending_About(request):
+    return render(request, '8.Template_Extending(About).html')
+
+def Template_Extending_Contact(request):
+    return render(request, '9.Template_Extending(Contact).html')
+
+def DataToHtml(request):
+    data = Student_Details.objects.all()
+    return render(request, '10.DatatoHtml.html', {'Details':data})
 

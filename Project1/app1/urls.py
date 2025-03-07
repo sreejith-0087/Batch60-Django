@@ -10,10 +10,12 @@ urlpatterns = [
     path('std_age/<int:age>', Std_Age, name='std_age'),
     path('base_html/', Base_Html, name='base_html'),
     path('static_file/', Static_File, name='static_file'),
-    path('', Page_Redirection_Home, name='home'),
+    path('home/', Page_Redirection_Home, name='home'),
     path('about/', Page_Redirection_About, name='about'),
     path('contact/', Page_Redirection_Contact, name='contact'),
+    path('template_home/', Template_Extending_Home, name='template_home'),
+    path('template_about/', Template_Extending_About, name='template_about'),
+    path('template_contact/', Template_Extending_Contact, name='template_contact'),
+    path('', DataToHtml, name='datatohtml'),
 ]
-
-
 
