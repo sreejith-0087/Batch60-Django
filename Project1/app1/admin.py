@@ -4,3 +4,5 @@ from .models import *
 
 
 admin.site.register(Student_Details)
+
+admin.site.register(UserModel)
