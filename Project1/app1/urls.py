@@ -22,11 +22,14 @@ urlpatterns = [
     path('profilecard/', ProfileCard, name='profilecard'),
     path('register/', Register, name='register'),
     path('login/', Login, name='login'),
-    path('', Auth_Base, name='auth_base'),
+    path('auth_base/', Auth_Base, name='auth_base'),
     path('auth_reg/', Auth_Register, name='auth_reg'),
     path('auth_login/', Auth_Login, name='auth_login'),
     path('auth_logout/', Auth_Logout, name='auth_logout'),
-
+    path('file_upload/', File_Upload, name='file_upload'),
+    path('display_file/', Display_Files, name='display_file'),
+    path('', Book_List, name='book_list'),
+    path('add_book/', Add_Book, name='add_book'),
 
 ]
 

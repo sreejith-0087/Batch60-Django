@@ -177,3 +177,41 @@ def Auth_Logout(request):
     return redirect('/')
 
 
+def File_Upload(request):
+    if request.method == 'POST':
+        fileform = FileForm(request.POST, request.FILES)
+
+        if fileform.is_valid():
+            fn = fileform.cleaned_data['file_name']
+            file = fileform.cleaned_data['file']
+
+            FileModel(File_Name=fn, File=file).save()
+
+            return redirect('/display_file')
+        else:
+            return HttpResponse('Upload Failed')
+    return render(request, '19.File_Upload.html')
+
+
+def Display_Files(request):
+    dis = FileModel.objects.all()
+    return render(request, '20.Display_Files.html', {'dis':dis})
+
+
+def Book_List(request):
+    book = Book.objects.all()
+    return render(request, '21.Book_List.html', {'book':book})
+
+def Add_Book(request):
+    if request.method == 'POST':
+        form = BookForm(request.POST, request.FILES)
+
+        if form.is_valid():
+            form.save()
+
+            return redirect('/')
+    else:
+        form = BookForm()
+    return render(request, '22.Add_Books.html', {'form':form})
+
+

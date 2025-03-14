@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Files</title>
+</head>
+<body>
+
+<div>
+  {% for i in dis %}
+
+  <p>File Name: {{i.File_Name}}</p>
+
+  <img src="{{i.File.url}}" alt="{{i.File_Name}}" height="300" width="350">
+
+  {% endfor %}
+</div>
+
+</body>
+</html>
+
